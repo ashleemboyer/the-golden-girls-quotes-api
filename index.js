@@ -110,15 +110,7 @@ const QUOTES = [
 app.get('/', (req, res) => {
   const randomIndex = Math.floor(Math.random() * QUOTES.length);
   const quote = QUOTES[randomIndex];
-
-  console.log(randomIndex);
-
-  console.log('Sending quote:');
-  console.log(quote);
-
   res.send(quote);
 });
 
-app.listen(port, () =>
-  console.log('The Golden Girls quotes API is running on port', port),
-);
+app.listen(port, () => console.log('The Golden Girls quotes API is running!'));
